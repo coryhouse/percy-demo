@@ -1,6 +1,6 @@
 # Percy Demo
 
-This project showcases using Percy with Storybook for automated image-based tests.
+This project showcases using [Percy](https://percy.io/) with Storybook for automated image-based tests.
 
 ## Quick Start
 
