@@ -17,7 +17,8 @@
     "build-storybook": "build-storybook",
     "snapshot": "build-storybook && percy-storybook --widths=320,1280",
     "cy": "cypress open",
-    "cy:ci": "npm start & wait-on http://localhost:3000 && cypress run",
+    "cy:run": "percy exec -- cypress:run",
+    "cy:ci": "npm start & wait-on http://localhost:3000 && npm run cy:run",
     "percy-app": "run-p start cy"
   },
   "eslintConfig": {
