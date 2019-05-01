@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "cypress": "^3.2.0",
+    "http-server": "^0.11.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.0"
@@ -16,8 +17,8 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "snapshot": "build-storybook && percy-storybook --widths=320,1280",
-    "cy": "cypress open",
-    "cy:ci": "npm start & wait-on http://localhost:3000 && percy exec -- cypress run",
+    "cy": "percy exec -- cypress open",
+    "cy:ci": "npm start & wait-on http://localhost:3000 && percy exec -- node ./run-tests.js",
     "percy-app": "run-p start cy"
   },
   "eslintConfig": {
