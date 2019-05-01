@@ -11,6 +11,7 @@ context("App", () => {
 
   it("should gen snapshot", () => {
     // Generate image snapshot using Percy
+    cy.get("p").should("exist");
     cy.percySnapshot();
   });
 });
