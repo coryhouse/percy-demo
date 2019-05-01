@@ -1,3 +1,4 @@
+// This separate file is copied from Percy's Cypress example: https://github.com/percy/example-percy-cypress/blob/master/run-tests.js
 const httpServer = require("http-server");
 const port = process.env.PORT_NUMBER || 8000;
 const spawn = require("child_process").spawn;
