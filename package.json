@@ -18,7 +18,7 @@
     "build-storybook": "build-storybook",
     "snapshot": "build-storybook && percy-storybook --widths=320,1280",
     "cy:local": "cross-env PERCY_TOKEN=process.env.PERCY_TOKEN percy exec -- node ./run-tests.js",
-    "cy:ci": "percy exec -- node ./run-tests.js",
+    "cy:ci": "npm start & wait-on http://localhost:3000 && percy exec -- node ./run-tests.js",
     "percy-app": "run-p start cy"
   },
   "eslintConfig": {
