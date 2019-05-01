@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "cypress": "^3.2.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.0"
@@ -14,7 +15,10 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "snapshot": "build-storybook && percy-storybook --widths=320,1280"
+    "snapshot": "build-storybook && percy-storybook --widths=320,1280",
+    "cy": "cypress open",
+    "cy:ci": "npm start & wait-on http://localhost:3000 && cypress run",
+    "percy-app": "run-p start cy"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -33,11 +37,14 @@
   },
   "devDependencies": {
     "@babel/core": "^7.4.4",
+    "@percy/cypress": "^1.0.7",
     "@percy/storybook": "^3.0.2",
     "@storybook/addon-actions": "^5.0.11",
     "@storybook/addon-links": "^5.0.11",
     "@storybook/addons": "^5.0.11",
     "@storybook/react": "^5.0.11",
-    "babel-loader": "^8.0.5"
+    "babel-loader": "^8.0.5",
+    "npm-run-all": "^4.1.5",
+    "wait-on": "^3.2.0"
   }
 }
