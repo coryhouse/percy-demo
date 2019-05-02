@@ -1,6 +1,14 @@
 # Percy Demo
 
-This project showcases using [Percy](https://percy.io/) with Storybook for automated image-based tests.
+This project showcases using [Percy](https://percy.io/) for automated image-based tests.
+
+## Goal
+
+Run 3 types of tests via CI:
+
+1. Jest
+2. [Visual Storybook tests via Percy](https://docs.percy.io/docs/storybook)
+3. Visual app tests via [Cypress and Percy](https://docs.percy.io/docs/cypress)
 
 [![This project is using Percy.io for visual regression testing.](https://percy.io/static/images/percy-badge.svg)](https://percy.io/Bitnative-LLC/percy-demo)
 
@@ -33,4 +41,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 1. `npm i cypress @percy/cypress`
 1. [Add to cypress/support/commands.js](https://docs.percy.io/docs/cypress#section-setup)
-1.
+1. Add npm script for ci: `percy-cypress-app:ci`
