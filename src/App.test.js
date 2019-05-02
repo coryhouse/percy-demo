@@ -10,12 +10,12 @@ it("renders without crashing", () => {
   ReactDOM.unmountComponentAtNode(div);
 });
 
-it("matches snapshot", () => {
-  const tree = renderer.create(<App />).toJSON();
-  expect(tree).toMatchSnapshot();
-});
+// it("matches snapshot", () => {
+//   const tree = renderer.create(<App />).toJSON();
+//   expect(tree).toMatchSnapshot();
+// });
 
-it("contains a paragraph", () => {
-  const { getByText } = render(<App />);
-  getByText("Learn React again and again.");
-});
+// it("contains a paragraph", () => {
+//   const { getByText } = render(<App />);
+//   getByText("Learn React again and again.");
+// });

@@ -1,12 +1,13 @@
 language: node_js
 cache:
+  # cache both npm modules and Cypress binary
   directories:
     - ~/.npm
-    - ~/.cachenpm
+    - ~/.cache
   override:
     - npm ci
     - npm run cy:verify
 node_js:
   - "11"
 script:
-  - npm run test:ci
+  - npm run percy-cypress-app:ci
