@@ -5,12 +5,10 @@ context("App", () => {
 
   it("should show welcome message with logo on homepage", () => {
     cy.get("p").should("contain", "Edit src/App.js and save to reload.");
-    cy.percySnapshot();
   });
 
   it("should gen snapshot", () => {
     // Generate image snapshot using Percy
-    cy.get("p").should("exist");
     cy.percySnapshot();
   });
 });

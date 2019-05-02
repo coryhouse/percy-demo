@@ -42,7 +42,7 @@ exports[`matches snapshot 1`] = `
     </a>
   </header>
   <footer>
-    Copyright 2019
+    Copyright 2018
   </footer>
 </div>
 `;
