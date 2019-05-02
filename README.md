@@ -7,8 +7,8 @@ This project showcases using [Percy](https://percy.io/) for automated image-base
 Run 3 types of tests via CI:
 
 1. Jest
-2. [Visual Storybook tests via Percy](https://docs.percy.io/docs/storybook)
-3. Visual app tests via [Cypress and Percy](https://docs.percy.io/docs/cypress)
+2. Automatically generated [Visual Storybook tests via Percy](https://docs.percy.io/docs/storybook) for all stories. Anytime a story changes visually, the CI server should block the build.
+3. Visual app tests via [Cypress and Percy](https://docs.percy.io/docs/cypress). Declare a visual test in Cypress via a single command: `cy.percySnapshot()`.
 
 [![This project is using Percy.io for visual regression testing.](https://percy.io/static/images/percy-badge.svg)](https://percy.io/Bitnative-LLC/percy-demo)
 
