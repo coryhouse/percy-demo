@@ -8,4 +8,4 @@ cache:
     - npm run cy:verify
 node_js:
   - "11"
-script: npm run cy:ci
+script: npm run test:ci
