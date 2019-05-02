@@ -17,5 +17,5 @@ it("matches snapshot", () => {
 
 it("contains a paragraph", () => {
   const { getByText } = render(<App />);
-  getByText("Learn React again and again.");
+  getByText("Learn React again and again?");
 });
