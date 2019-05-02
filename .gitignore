@@ -24,3 +24,5 @@ yarn-error.log*
 
 .env
 storybook-static
+
+cypress/videos
