@@ -1,5 +1,3 @@
-/// <reference types="Cypress" />
-
 context("App", () => {
   beforeEach(() => {
     cy.visit("http://localhost:3000");
@@ -7,6 +5,7 @@ context("App", () => {
 
   it("should show welcome message with logo on homepage", () => {
     cy.get("p").should("contain", "Edit src/App.js and save to reload.");
+    cy.percySnapshot();
   });
 
   it("should gen snapshot", () => {
