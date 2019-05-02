@@ -13,7 +13,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "test:ci": "test && percy-storybook && percy-cypress-app:ci",
+    "test:ci": "npm run test && npm run percy-storybook && npm run percy-cypress-app:ci",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
