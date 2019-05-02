@@ -4,6 +4,19 @@ exports[`matches snapshot 1`] = `
 <div
   className="App"
 >
+  <nav>
+    <a
+      href="/"
+    >
+      Home
+    </a>
+     | 
+    <a
+      href="/about"
+    >
+      About
+    </a>
+  </nav>
   <header
     className="App-header"
   >
@@ -28,5 +41,8 @@ exports[`matches snapshot 1`] = `
       Learn React again and again.
     </a>
   </header>
+  <footer>
+    Copyright 2019
+  </footer>
 </div>
 `;
