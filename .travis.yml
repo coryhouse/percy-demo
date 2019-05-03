@@ -11,3 +11,5 @@ node_js:
   - "11"
 script:
   - npm run percy-cypress-app:ci
+  # to kill all background jobs (like "npm start")
+  - kill $(jobs -p) || true
