@@ -47,3 +47,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 https://docs.percy.io/docs/cypress-tutorial
 https://github.com/percy/example-percy-cypress
+https://github.com/cypress-io/cypress-example-kitchensink/blob/master/.travis.yml
