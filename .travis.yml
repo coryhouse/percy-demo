@@ -15,7 +15,7 @@ script:
   - npm run percy-storybook
   # Start app and run in background thread
   - npm start &
-  - npm run percy-cypress-app:ci -- --record
+  - npm run percy-cypress-app:ci
   # after all tests finish running we need
   # to kill all background jobs (like "npm start")
   - kill $(jobs -p) || true

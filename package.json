@@ -20,7 +20,7 @@
     "cy:verify": "cypress verify",
     "percy-storybook": "build-storybook && cross-env PERCY_TOKEN=b8c7f2962e9c5e6c4ad37162d407889284ba0935a3b540664d93c3674aeaebbf percy-storybook --widths=320,1280",
     "percy-cypress-app": "npm start & wait-on http://localhost:3000 && cross-env PERCY_TOKEN=b8c7f2962e9c5e6c4ad37162d407889284ba0935a3b540664d93c3674aeaebbf percy exec -- node ./run-tests.js",
-    "percy-cypress-app:ci": "npm start & wait-on http://localhost:3000 && percy exec -- node ./run-tests.js",
+    "percy-cypress-app:ci": "cypress run",
     "cy": "run-p start cy:local"
   },
   "eslintConfig": {
