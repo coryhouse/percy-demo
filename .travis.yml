@@ -10,6 +10,7 @@ cache:
 node_js:
   - "11"
 script:
-  - npm run percy-cypress-app:ci
+  - npm run percy-storybook
+  # after all tests finish running we need
   # to kill all background jobs (like "npm start")
   - kill $(jobs -p) || true
