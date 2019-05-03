@@ -1,3 +1,4 @@
+# Insprired by https://github.com/cypress-io/cypress-example-kitchensink/blob/master/.travis.yml
 language: node_js
 cache:
   # cache both npm modules and Cypress binary
@@ -12,7 +13,34 @@ node_js:
 script:
   - npm test
   - npm run percy-storybook
-  - npm run percy-cypress-app:ci
+  # Start app and run in background thread
+  - npm start &
+  - npm run percy-cypress-app:ci -- --record --parallel --group $STAGE_NAME
   # after all tests finish running we need
   # to kill all background jobs (like "npm start")
   - kill $(jobs -p) || true
+jobs:
+  include:
+    # we have multiple jobs to execute using just a single stage
+    # but we can pass group name via environment variable to Cypress test runner
+    - stage: test
+      env:
+        - STAGE_NAME=1x-electron
+      <<: *defaults
+    # run tests in parallel by including several test jobs with same name variable
+    - stage: test
+      env:
+        - STAGE_NAME=4x-electron
+      <<: *defaults
+    - stage: test
+      env:
+        - STAGE_NAME=4x-electron
+      <<: *defaults
+    - stage: test
+      env:
+        - STAGE_NAME=4x-electron
+      <<: *defaults
+    - stage: test
+      env:
+        - STAGE_NAME=4x-electron
+      <<: *defaults
