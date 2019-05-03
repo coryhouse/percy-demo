@@ -1,3 +1,4 @@
+# Insprired by https://github.com/cypress-io/cypress-example-kitchensink/blob/master/.travis.yml
 language: node_js
 cache:
   # cache both npm modules and Cypress binary
@@ -10,6 +11,11 @@ cache:
 node_js:
   - "11"
 script:
+  - npm test
+  - npm run percy-storybook
+  # Start app and run in background thread
+  - npm start &
   - npm run percy-cypress-app:ci
+  # after all tests finish running we need
   # to kill all background jobs (like "npm start")
   - kill $(jobs -p) || true

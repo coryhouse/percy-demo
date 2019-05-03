@@ -42,3 +42,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 1. `npm i cypress @percy/cypress`
 1. [Add to cypress/support/commands.js](https://docs.percy.io/docs/cypress#section-setup)
 1. Add npm script for ci: `percy-cypress-app:ci`
+
+## Helpful Links:
+
+https://docs.percy.io/docs/cypress-tutorial
+https://github.com/percy/example-percy-cypress
+https://github.com/cypress-io/cypress-example-kitchensink/blob/master/.travis.yml

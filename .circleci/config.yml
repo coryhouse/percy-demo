@@ -4,6 +4,8 @@ default_steps: &default_steps
   steps:
     - checkout
     - run: npm ci
+    - run: npm t
+    - run: npm run build-storybook
     - run: npm run percy-cypress-app:ci
 
 jobs:
