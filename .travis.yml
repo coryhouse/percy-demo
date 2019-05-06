@@ -10,6 +10,8 @@ cache:
 node_js:
   - "11"
 script:
+  # Link Node to workaround Travis CI not being able to find it.
+  - sudo ln -s $(which node) /usr/bin/node
   - npm run percy-cypress-app:ci
   # to kill all background jobs (like "npm start")
   - kill $(jobs -p) || true
